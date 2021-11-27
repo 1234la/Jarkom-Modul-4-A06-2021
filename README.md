@@ -284,3 +284,22 @@ Dari IP **10.2.0.0 /15** ini, kita membagi rangenya menjadi 2 sama rata. Di sisi
 
 ![WhatsApp Image 2021-11-27 at 21 53 14](https://user-images.githubusercontent.com/55240758/143686396-b4ce15e6-0b14-4892-9000-7d2ad4ad68e1.jpeg)
 
+Maka berdasarkan perhitungan atau pembagian IP yang diperoleh dari pohon subnetting, didapatkan :
+
+| Subnet | IP	| Subnet Mask	| Length | 
+| --- | --- | --- | --- | --- | 
+| A1 (elena) | 10.2.4.0 | 255.255.255.0 | /24 |  
+|A2 (enieslobby)	| 10.2.4.0	| 255.255.252.0	| /22	|   
+|A3 (guanho + oimo)	| 10.2.16.0	| 255.255.255.252	| /30 | 
+|A4 (jabra)	| 10.2.36.0	| 255.255.252.0	| /22	|   
+|A5 (foosha + guanho)	| 10.2.64.0	| 255.255.255.252	| /30 |	
+|A6 (maingate + guanho + alabasta)	| 10.2.32.0	| 255.255.254.0	| /23 |	
+|A7 (jorge)	| 10.2.34.0	| 255.255.255.240	| /28 |
+|A8 (blueno)	| 10.3.128.0	| 255.255.252.0	| /22 |	
+|A9 (foosha + water7)	| 10.3.64.0	| 255.255.255.252	| /30	| 
+|A10 (water7 + pucci)	| 10.3.16.0	| 255.255.255.252	| /30 | 
+|A11 (cipher)	| 10.3.32.0	| 255.255.252.0	| /22 |	
+|A12 (jipangu)	| 10.3.0.0	| 255.255.248.0	| /21 | 
+|A13 (calmbelt + courtyard)	| 10.3.8.0	| 255.255.128.0	| /25 |	
+|A14 (doriki)	| 10.2.128.0	| 255.255.255.252	| /30 |	
+|A15 (fukurou)	| 10.2.8.0	| 255.255.255.252	| /30 |	
