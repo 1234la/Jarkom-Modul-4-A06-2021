@@ -225,5 +225,61 @@ sehingga pengaturan sebagai berikut :
 ![4](https://user-images.githubusercontent.com/55240758/143682849-607ceebc-291f-4a23-9518-21d9b6ce9c21.jpg)
 
 ## CIDR (Classless Inter Domain Routing) - GNS3
+Selain menggunakan metode VSLM, perhitungan IP dapat menggunakan metode CIDR dimana kita mengelompokkan subnet A yang telah didapat pada saat menggunakan VSLM yakni dengan mengelompokkan antarsubnet yang terhubung dengan 1 router yang sama dan dimulai dari node terluar. 
+
+**Langkah 1:** Melakukan pengelompokan dengan metode CIDR
+
+1. Pengelompokan subnet B sebagai berikut :
+- B1 /20 → A12 /25 + A13 /21
+- B2 /21 → A1 /24 + A2 /22
+- B3 /22 → A6 /23 + A17 /28
+
+![1](https://user-images.githubusercontent.com/55240758/143684177-00483b67-cfc1-4844-bdc0-0f5e1bf285bd.png)
+
+2. Pengelompokan subnet C sebegai berikut :
+- C1 /19 → B1 /20 + A10 /30
+- C2 /20 → B2 /21 + A15 /30
+- C3 /21 → B3 /22 + A4 /22
+
+![2](https://user-images.githubusercontent.com/55240758/143684162-87d685d7-2624-40f0-9d67-0e1c9961920c.png)
+
+3. Pengelompokan subnet D sebagai berikut :
+- D1 /18 → C1 /19 + A11 /22
+- D2 /19 → C2 /20 + A3 /30
+
+![3](https://user-images.githubusercontent.com/55240758/143684377-5957f5e8-9d97-4490-8c29-b707c266e383.png)
+
+4. Pengelompokan subnet E sebagai berikut :
+- E1 /17 → D1 /18 + A9 /30
+- E2 /18 → D2 /19 + C3 /21
+
+![4](https://user-images.githubusercontent.com/55240758/143684431-9679eb02-58f5-4d22-a816-386752a67556.png)
+
+
+5. Pengelompokan subnet F sebagai berikut :
+- F1 /16 → E1 /17 + A8 /22
+- F2 /17 → E2 /18 + A5 /30
+
+![5](https://user-images.githubusercontent.com/55240758/143684609-eeff8a65-f0f2-4a77-a914-e1e625b54d0b.png)
+
+
+6. Pengelompokan subnet G sebagai berikut :
+- G1 /16 → F2 /17 + A14 /30
+
+![6](https://user-images.githubusercontent.com/55240758/143684626-93fc2d34-150d-4868-a1ca-9ce1eb3a55e7.png)
+
+
+7. Pengelompokan subnet H sebagai berikut :
+- H1 /15 → F1 /16 + G1 /16
+
+![7](https://user-images.githubusercontent.com/55240758/143684638-563c98cd-b029-4b08-b7cc-1b180fc60b38.png)
+
+**Langkah 2:** Melakukan perhitungan dan pembagian IP berdasarkan labelling atau pengelompokan yang telah dilakukan. Adapun untuk mempermudah perhitungan dengan menggunakan visualisasi atau pohon subnetting. 
+
+Sama seperti VSLM pada perhitungan CIDR, berdasarkan netmask terbesar dari pengelompokan yang telah dilakukan yaitu **netmask length /15** , dimana netmask length tersebut memiliki **wildcard 0.1.255.255** berdasarkan tabel modul yang telah dilampirkan sebelumnya. Adapun berdasarkan wildcard tersebut kita dapat menyimpulkan berapa range IP pada digit tertentu yang disediakan untuk suatu netmask. Pada kasus ini digit kedua wilcard yaitu **1**, atau dapat kita artikan range digit ketiga suatu IP pada netmask tersebut adalah 0-1, yang menandakan ada 2 macam kombinasi IP pada digit tersebut.
+
+Sebelum melakukan pehitungan, perlu diketahui bahwa prefix IP yang kami gunakan adalah **10.2**. Kemudian berdasarkan prefix IP & netmask length yang telah didapat, IP permulaan yang akan dijadikan root pada pohon subnetting yaitu **10.2.0.0 /15**. 
+
+Dari IP **10.2.0.0 /15** ini, kita membagi rangenya menjadi 2 sama rata. Di sisi kiri IP-nya menjadi **10.2.0.0 /16** di mana diassign ke subnet G1 yang memiliki netmask /16. Lalu di sisi kanan, memiliki IP **10.3.0.0 /16**. Lalu kita membagi lagi hingga sama rata dan didapatkan seluruh subnet memiliki IP masing-masing. Dan seterusnya hingga didapatkan pohon subnetting sebagai berikut :
 
 
