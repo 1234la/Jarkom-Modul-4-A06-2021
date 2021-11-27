@@ -286,12 +286,12 @@ Dari IP **10.2.0.0 /15** ini, kita membagi rangenya menjadi 2 sama rata. Di sisi
 
 Maka berdasarkan perhitungan atau pembagian IP yang diperoleh dari pohon subnetting, didapatkan :
 
-| Subnet | IP	| Subnet Mask	| Length | 
-| --- | --- | --- | --- | --- | 
+| Subnet | IP	| Subnet Mask	| Length |   
+| --- | --- | --- | --- | 
 | A1 (elena) | 10.2.4.0 | 255.255.255.0 | /24 |  
-|A2 (enieslobby)	| 10.2.4.0	| 255.255.252.0	| /22	|   
-|A3 (guanho + oimo)	| 10.2.16.0	| 255.255.255.252	| /30 | 
-|A4 (jabra)	| 10.2.36.0	| 255.255.252.0	| /22	|   
+| A2 (enieslobby)	| 10.2.4.0	| 255.255.252.0	| /22	|   
+| A3 (guanho + oimo)	| 10.2.16.0	| 255.255.255.252	| /30 | 
+| A4 (jabra)	| 10.2.36.0	| 255.255.252.0	| /22	|   
 |A5 (foosha + guanho)	| 10.2.64.0	| 255.255.255.252	| /30 |	
 |A6 (maingate + guanho + alabasta)	| 10.2.32.0	| 255.255.254.0	| /23 |	
 |A7 (jorge)	| 10.2.34.0	| 255.255.255.240	| /28 |
