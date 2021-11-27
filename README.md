@@ -282,4 +282,21 @@ Sebelum melakukan pehitungan, perlu diketahui bahwa prefix IP yang kami gunakan 
 
 Dari IP **10.2.0.0 /15** ini, kita membagi rangenya menjadi 2 sama rata. Di sisi kiri IP-nya menjadi **10.2.0.0 /16** di mana diassign ke subnet G1 yang memiliki netmask /16. Lalu di sisi kanan, memiliki IP **10.3.0.0 /16**. Lalu kita membagi lagi hingga sama rata dan didapatkan seluruh subnet memiliki IP masing-masing. Dan seterusnya hingga didapatkan pohon subnetting sebagai berikut :
 
-
+konfigurasi pada GNS3
+Foosha
+Water 7
+Pucci
+Guanhao
+Alabasta
+Oimo
+Seastone
+Blueno
+Chiper
+Jipangu
+Calmbert
+Courtyard
+Jabra
+EnniesLobby
+Elena
+MainGate
+Jorge
