@@ -284,19 +284,35 @@ Dari IP **10.2.0.0 /15** ini, kita membagi rangenya menjadi 2 sama rata. Di sisi
 
 konfigurasi pada GNS3
 Foosha
+
 Water 7
+
 Pucci
+
 Guanhao
+
 Alabasta
+
 Oimo
+
 Seastone
+
 Blueno
+
 Chiper
+
 Jipangu
+
 Calmbert
+
 Courtyard
+
 Jabra
+
 EnniesLobby
+
 Elena
+
 MainGate
+
 Jorge
