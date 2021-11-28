@@ -581,6 +581,8 @@ gateway 10.2.8.1
 
 ![image](https://user-images.githubusercontent.com/55240758/143735119-ba4cda5c-1f19-4f97-bcd1-fe6a5c4cee31.png)
 
+Kemudian, lakukan config berikut sesuai dengan server :
+
 ### Foosha
 ```
 route add -net 10.3.8.0 netmask 255.255.255.128 gw 10.3.64.2
