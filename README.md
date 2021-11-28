@@ -576,3 +576,59 @@ address 10.2.8.2
 netmask 255.255.254.0
 gateway 10.2.8.1
 ```
+
+**Langkah 4:** Melakukan setting routing pada setiap server, agar dapat terhubung dengan server lain maupun client. Settingan route ini disarankan untuk dibackup terlebih dahulu kedalam root. Adapaun rangkuman routing yang telah kami buat sebagai berikut :
+
+![image](https://user-images.githubusercontent.com/55240758/143735119-ba4cda5c-1f19-4f97-bcd1-fe6a5c4cee31.png)
+
+### Foosha
+```
+route add -net 10.3.8.0 netmask 255.255.255.128 gw 10.3.64.2
+route add -net 10.3.0.0 netmask 255.255.248.0 gw 10.3.64.2
+route add -net 10.3.16.0 netmask 255.255.255.252 gw 10.3.64.2
+route add -net 10.3.32.0 netmask 255.255.252.0 gw 10.3.64.2
+route add -net 10.2.4.0 netmask 255.255.255.0 gw 10.2.64.2
+route add -net 10.2.0.0 netmask 255.255.252.0 gw 10.2.64.2
+route add -net 10.2.8.0 netmask 255.255.255.252 gw 10.2.64.2
+route add -net 10.2.16.0 netmask 255.255.254.0 gw 10.2.64.2
+route add -net 10.2.36.0 netmask 255.255.252.0 gw 10.2.64.2
+route add -net 10.2.34.0 netmask 255.255.255.240 gw 10.2.64.2
+route add -net 10.2.32.0 netmask 255.255.254.0 gw 10.2.64.2
+```
+
+### Guanhao
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.2.64.1
+route add -net 10.2.4.0 netmask 255.255.255.0 gw 10.2.16.2
+route add -net 10.2.0.0 netmask 255.255.252.0 gw 10.2.16.2
+route add -net 10.2.8.0 netmask 255.255.254.0 gw 10.2.16.2
+route add -net 10.2.34.0 netmask 255.255.255.240 gw 10.2.32.3
+```
+
+### Water7
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.3.64.1
+route add -net 10.3.0.0 netmask 255.255.248.0 gw 10.3.16.2
+route add -net 10.3.8.0 netmask 255.255.128.0 gw 10.3.16.2
+```
+
+### Pucci
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.3.16.1
+```
+
+### Oimo
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.2.16.1
+route add -net 10.2.0.0 netmask 255.255.252.0 gw 10.2.4.3
+```
+
+### Seastone
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.2.4.1
+```
+
+### Alabasta
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.2.32.1
+```
