@@ -282,14 +282,14 @@ Sebelum melakukan pehitungan, perlu diketahui bahwa prefix IP yang kami gunakan 
 
 Dari IP **10.2.0.0 /15** ini, kita membagi rangenya menjadi 2 sama rata. Di sisi kiri IP-nya menjadi **10.2.0.0 /16** di mana diassign ke subnet G1 yang memiliki netmask /16. Lalu di sisi kanan, memiliki IP **10.3.0.0 /16**. Lalu kita membagi lagi hingga sama rata dan didapatkan seluruh subnet memiliki IP masing-masing. Dan seterusnya hingga didapatkan pohon subnetting sebagai berikut :
 
-![WhatsApp Image 2021-11-27 at 21 53 14](https://user-images.githubusercontent.com/55240758/143686396-b4ce15e6-0b14-4892-9000-7d2ad4ad68e1.jpeg)
+![WhatsApp Image 2021-11-28 at 09 13 08](https://user-images.githubusercontent.com/55240758/143726316-957de81a-d008-4819-821f-ef7d022ec383.jpeg)
 
 Maka berdasarkan perhitungan atau pembagian IP yang diperoleh dari pohon subnetting, didapatkan :
 
 | Subnet | IP	| Subnet Mask	| Length |   
 | --- | --- | --- | --- | 
-| A1 (elena) | 10.2.4.0 | 255.255.255.0 | /24 |  
-| A2 (enieslobby)	| 10.2.4.0	| 255.255.252.0	| /22	|   
+| A1 (elena) | 10.2.0.0 | 255.255.252.0 | /22 |  
+| A2 (enieslobby)	| 10.2.4.0	| 255.255.254.0	| /24	|   
 | A3 (guanho + oimo)	| 10.2.16.0	| 255.255.255.252	| /30 | 
 | A4 (jabra)	| 10.2.36.0	| 255.255.252.0	| /22	|   
 |A5 (foosha + guanho)	| 10.2.64.0	| 255.255.255.252	| /30 |	
