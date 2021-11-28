@@ -362,7 +362,7 @@ address 10.3.16.1
 netmask 255.255.255.252
 ```
 
-### Pucci
+- Pucci
 ```
 auto lo
 iface lo inet loopback
@@ -384,10 +384,16 @@ address 10.3.8.1
 netmask 255.255.255.128
 ```
 
-- Guanho
+- Guanhao
 ```
 auto lo
 iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.204.64.2
+netmask 255.255.255.252
+gateway 10.2.64.1
 
 auto eth1
 iface eth1 inet static
@@ -403,12 +409,6 @@ auto eth3
 iface eth2 inet static
 address 10.2.16.1
 netmask 255.255.255.252
-
-auto eth4
-iface eth4 inet static
-address 10.204.64.2
-netmask 255.255.255.252
-gateway 10.2.64.1
 ```
 
 - Oimo
