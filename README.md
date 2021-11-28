@@ -289,7 +289,7 @@ Maka berdasarkan perhitungan atau pembagian IP yang diperoleh dari pohon subnett
 | Subnet | IP	| Subnet Mask	| Length |   
 | --- | --- | --- | --- | 
 | A1 (elena) | 10.2.0.0 | 255.255.252.0 | /22 |  
-| A2 (enieslobby)	| 10.2.4.0	| 255.255.254.0	| /24	|   
+| A2 (enieslobby)	| 10.2.4.0	| 255.255.255.0	| /24	|   
 | A3 (guanho + oimo)	| 10.2.16.0	| 255.255.255.252	| /30 | 
 | A4 (jabra)	| 10.2.36.0	| 255.255.252.0	| /22	|   
 |A5 (foosha + guanho)	| 10.2.64.0	| 255.255.255.252	| /30 |	
@@ -303,3 +303,276 @@ Maka berdasarkan perhitungan atau pembagian IP yang diperoleh dari pohon subnett
 |A13 (calmbelt + courtyard) | 10.3.0.0	| 255.255.248.0	| /21 | 
 |A14 (doriki)	| 10.2.128.0	| 255.255.255.252	| /30 |	
 |A15 (fukurou)	| 10.2.8.0	| 255.255.255.252	| /30 |	
+
+**Langkah 3:** Melakukan setting ip config pada router, pc, server. Adapun rangkuman penyettingan sebagai berikut :
+
+![image](https://user-images.githubusercontent.com/55240758/143728891-3695ab3a-fc45-433a-bf10-72544c7fed07.png)
+
+pada GNS3 masukkan config IP sesuai dengan rangkuman diatas pada ``/etc/network/interfaces`` menggunakan ``nano`` atau klik kanan node > edit network configuration.
+
+### Pada Router  
+- Foosha
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+address 10.3.128.1
+netmask 255.255.252.0
+
+auto eth2
+iface eth2 inet static
+address 10.2.128.1
+netmask 255.255.255.252
+
+auto eth3
+iface eth3 inet static
+address 10.2.64.1
+netmask 255.255.255.252
+
+auto eth4
+iface eth4 inet static
+address 10.3.64.1
+netmask 255.255.255.252
+```
+
+- Water7
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.3.64.2
+netmask 255.255.255.252
+gateway 10.3.64.1
+
+auto eth1
+iface eth1 inet static
+address 10.3.32.1
+netmask 255.255.252.0
+
+auto eth2
+iface eth2 inet static
+address 10.3.16.1
+netmask 255.255.255.252
+```
+
+### Pucci
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.3.16.2
+netmask 255.255.255.252
+gateway 10.3.16.1
+
+auto eth1
+iface eth1 inet static
+address 10.3.0.1
+netmask 255.255.248.0
+
+auto eth2
+iface eth2 inet static
+address 10.3.8.1
+netmask 255.255.255.128
+```
+
+- Guanho
+```
+auto lo
+iface lo inet loopback
+
+auto eth1
+iface eth1 inet static
+address 10.2.32.1
+netmask 255.255.254.0
+
+auto eth2
+iface eth2 inet static
+address 10.2.36.1
+netmask 255.255.252.0
+
+auto eth3
+iface eth2 inet static
+address 10.2.16.1
+netmask 255.255.255.252
+
+auto eth4
+iface eth4 inet static
+address 10.204.64.2
+netmask 255.255.255.252
+gateway 10.2.64.1
+```
+
+- Oimo
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.2.16.2
+netmask 255.255.255.252
+gateway 10.2.16.1
+
+auto eth1
+iface eth1 inet static
+address 10.2.4.1
+netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+address 10.2.8.1
+netmask 255.255.255.252
+```
+
+- Seastone
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.2.4.3
+netmask 255.255.255.0
+gateway 10.2.4.1
+
+auto eth1
+iface eth1 inet static
+address 10.2.0.1
+netmask 255.255.252.0
+```
+
+- Alabasta
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 10.2.32.2
+netmask 255.255.254.0
+gateway 10.2.32.1
+
+auto eth1
+iface eth1 inet static
+address 10.2.34.1
+netmask 255.255.255.240
+```
+### Pada Client/PC
+- Blueno
+```
+auto eth0
+iface eth0 inet static
+address 10.3.128.2
+netmask 255.255.252.0
+gateway 10.3.128.1
+```
+
+- Cipher
+```
+auto eth0
+iface eth0 inet static
+address 10.3.32.2
+netmask 255.255.252.0
+gateway 10.3.32.1
+```
+
+- Calmbelt
+```
+auto eth0
+iface eth0 inet static
+address 10.3.0.2
+netmask 255.255.248.0
+gateway  10.3.0.1
+```
+
+- Courtyard
+```
+auto eth0
+iface eth0 inet static
+address 10.3.0.3
+netmask 255.255.248.0
+gateway  10.3.0.1
+```
+
+- Jipangu
+```
+auto eth0
+iface eth0 inet static
+address 10.3.8.2
+netmask 255.255.255.128
+gateway 10.3.8.1
+```
+
+- Maingate
+```
+auto eth0
+iface eth0 inet static
+address 10.2.32.3
+netmask 255.255.254.0
+gateway 10.2.32.1
+```
+
+- Jabra
+```
+auto eth0
+iface eth0 inet static
+address 10.2.36.2
+netmask 255.255.252.0
+gateway 10.2.36.1
+```
+
+- Enieslobby
+```
+auto eth0
+iface eth0 inet static
+address 10.2.4.2
+netmask 255.255.255.0
+gateway 10.2.4.1
+
+```
+
+- Elena
+```
+auto eth0
+iface eth0 inet static
+address 10.2.0.2
+netmask 255.255.252.0
+gateway 10.2.0.1
+```
+
+- Jorge
+```
+auto eth0
+iface eth0 inet static
+address 10.2.34.2
+netmask 255.255.255.240
+gateway 10.2.34.1
+```
+
+### Pada Server
+- Doriki
+```
+auto eth0
+iface eth0 inet static
+address 10.2.128.2
+netmask 255.255.255.252
+gateway 10.2.128.1
+```
+
+- Fukurou
+```
+auto eth0
+iface eth0 inet static
+address 10.2.8.2
+netmask 255.255.254.0
+gateway 10.2.8.1
+```
