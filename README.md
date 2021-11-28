@@ -583,8 +583,7 @@ gateway 10.2.8.1
 
 Agar dapat mengakses internet, pada command line interface router (CLI) **Foosha**  ketikkan perintah ``iptables –t nat –A POSTROUTING –o eth0 –j MASQUERADE –s 10.2.0.0/16``. Dan pada setiap node lainnya ketikkan ``echo nameserver 192.168.122.1 > /etc/resolv.conf``.
 
-Karena di GNS3 setiap ada restart, route akan hilang, maka perintah menambahkan route disimpan dalam sebuah file bash, misal kita simpan dengan nama route.sh, berarti ketikkan perintah ``nano route.sh`` dan tambahkan route berikut untuk keempat UML:
-
+Karena di GNS3 setiap ada restart, route akan hilang, maka perintah menambahkan route disimpan dalam sebuah file bash, misal kita simpan dengan nama route.sh, berarti ketikkan perintah ``nano route.sh`` dan tambahkan config route berikut sesuai dengan routernya:
 ### Foosha
 ```
 route add -net 10.3.8.0 netmask 255.255.255.128 gw 10.3.64.2
