@@ -457,7 +457,7 @@ iface lo inet loopback
 
 auto eth0
 iface eth0 inet static
-address 10.2.32.2
+address 10.2.32.3
 netmask 255.255.254.0
 gateway 10.2.32.1
 
