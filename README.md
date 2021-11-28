@@ -282,7 +282,7 @@ Sebelum melakukan pehitungan, perlu diketahui bahwa prefix IP yang kami gunakan 
 
 Dari IP **10.2.0.0 /15** ini, kita membagi rangenya menjadi 2 sama rata. Di sisi kiri IP-nya menjadi **10.2.0.0 /16** di mana diassign ke subnet G1 yang memiliki netmask /16. Lalu di sisi kanan, memiliki IP **10.3.0.0 /16**. Lalu kita membagi lagi hingga sama rata dan didapatkan seluruh subnet memiliki IP masing-masing. Dan seterusnya hingga didapatkan pohon subnetting sebagai berikut :
 
-![WhatsApp Image 2021-11-28 at 09 13 08](https://user-images.githubusercontent.com/55240758/143726316-957de81a-d008-4819-821f-ef7d022ec383.jpeg)
+![Pohon](https://user-images.githubusercontent.com/55240758/143726602-bb3f87f5-b63d-4aea-8275-1b2c34fd189a.jpeg)
 
 Maka berdasarkan perhitungan atau pembagian IP yang diperoleh dari pohon subnetting, didapatkan :
 
