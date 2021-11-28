@@ -299,7 +299,7 @@ Maka berdasarkan perhitungan atau pembagian IP yang diperoleh dari pohon subnett
 |A9 (foosha + water7)	| 10.3.64.0	| 255.255.255.252	| /30	| 
 |A10 (water7 + pucci)	| 10.3.16.0	| 255.255.255.252	| /30 | 
 |A11 (cipher)	| 10.3.32.0	| 255.255.252.0	| /22 |	
-|A12 (jipangu)| 10.3.8.0	| 255.255.128.0	| /25 |	
+|A12 (jipangu)| 10.3.8.0	| 255.255.255.128	| /25 |	
 |A13 (calmbelt + courtyard) | 10.3.0.0	| 255.255.248.0	| /21 | 
 |A14 (doriki)	| 10.2.128.0	| 255.255.255.252	| /30 |	
 |A15 (fukurou)	| 10.2.8.0	| 255.255.255.252	| /30 |	
